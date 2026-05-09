@@ -16,3 +16,7 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+
+def send_email_smtp():
+    return None
