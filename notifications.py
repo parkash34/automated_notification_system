@@ -7,4 +7,12 @@ from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 from twilio.rest import Client
 
-
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s — %(levelname)s — %(message)s",
+    handlers=[
+        logging.FileHandler("restaurant.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
