@@ -24,6 +24,12 @@ def send_email_smtp():
 
 load_dotenv()
 
+smtp_email = os.getenv("SMTP_EMAIL")
+if not smtp_email:
+    raise ValueError("SMTP EMAIL is missing in env")
 
+smtp_password = os.getenv("SMTP_PASSWORD")
+if not smtp_password:
+    raise ValueError("SMTP PASSWORD is missing in env")
 
 
